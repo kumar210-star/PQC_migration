@@ -1,0 +1,15 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports: ["8000:8000"]
+    volumes: ["pqc-data:/app/backend/data"]
+  dashboard:
+    build:
+      context: frontend
+    ports: ["5173:80"]
+    depends_on: [api]
+volumes:
+  pqc-data:
+

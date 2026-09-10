@@ -1,0 +1,1 @@
+"""Transparent quantum-risk rules."""

@@ -1,0 +1,20 @@
+{
+  "public_key": {
+    "RSA": {"risk": "CRITICAL", "priority": "CRITICAL", "reason": "RSA relies on integer factorization and is vulnerable to a sufficiently capable fault-tolerant quantum computer running Shor's algorithm."},
+    "ECDSA": {"risk": "CRITICAL", "priority": "CRITICAL", "reason": "ECDSA relies on the elliptic-curve discrete logarithm problem, which Shor's algorithm threatens."},
+    "ECDH": {"risk": "CRITICAL", "priority": "CRITICAL", "reason": "ECDH relies on the elliptic-curve discrete logarithm problem and exposes recorded traffic to harvest-now-decrypt-later risk."},
+    "ECC": {"risk": "HIGH", "priority": "HIGH", "reason": "Elliptic-curve public-key cryptography is threatened by Shor's algorithm."},
+    "DH": {"risk": "HIGH", "priority": "HIGH", "reason": "Classical finite-field Diffie-Hellman is threatened by Shor's algorithm."}
+  },
+  "symmetric": {
+    "AES-128": {"risk": "REVIEW", "priority": "MEDIUM", "reason": "Grover's algorithm gives a quadratic search speedup; review long-lived protection requirements and prefer 256-bit keys for quantum margin."},
+    "AES-256": {"risk": "LOWER", "priority": "LOW", "reason": "AES-256 retains a substantial security margin against known generic quantum search attacks."},
+    "AES-256-GCM": {"risk": "LOWER", "priority": "LOW", "reason": "AES-256-GCM is symmetric authenticated encryption and is generally retained, with sound nonce and key management."}
+  },
+  "hash": {
+    "SHA-256": {"risk": "LOWER", "priority": "LOW", "reason": "SHA-256 is not broken by Shor's algorithm; quantum collision and preimage speedups require context-specific review, not replacement with a KEM or signature."},
+    "SHA-384": {"risk": "LOWER", "priority": "LOW", "reason": "SHA-384 retains a strong quantum security margin for typical hashing uses."},
+    "SHA-512": {"risk": "LOWER", "priority": "LOW", "reason": "SHA-512 retains a strong quantum security margin for typical hashing uses."}
+  }
+}
+

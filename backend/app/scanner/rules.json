@@ -1,0 +1,21 @@
+[
+  {"name":"ECDSA P-256","pattern":"(?i)(ECDSA[^\\n]{0,30}(P-?256|SECP256R1)|(P-?256|SECP256R1)[^\\n]{0,30}ECDSA)","category":"Public-key cryptography","role":"Digital Signature","parameter":"P-256","family":"ECDSA"},
+  {"name":"ECDH P-256","pattern":"(?i)(ECDH[^\\n]{0,30}(P-?256|SECP256R1)|(P-?256|SECP256R1)[^\\n]{0,30}ECDH)","category":"Public-key cryptography","role":"Key Establishment","parameter":"P-256","family":"ECDH"},
+  {"name":"RSA-4096","pattern":"(?i)RSA[_ -]?4096","category":"Public-key cryptography","role":"Contextual","parameter":"4096 bits","family":"RSA"},
+  {"name":"RSA-3072","pattern":"(?i)RSA[_ -]?3072","category":"Public-key cryptography","role":"Contextual","parameter":"3072 bits","family":"RSA"},
+  {"name":"RSA-2048","pattern":"(?i)RSA[_ -]?2048","category":"Public-key cryptography","role":"Contextual","parameter":"2048 bits","family":"RSA"},
+  {"name":"ECDSA","pattern":"(?i)\\bECDSA\\b","category":"Public-key cryptography","role":"Digital Signature","family":"ECDSA"},
+  {"name":"ECDH","pattern":"(?i)\\bECDH\\b","category":"Public-key cryptography","role":"Key Establishment","family":"ECDH"},
+  {"name":"ECC","pattern":"(?i)\\bECC\\b","category":"Public-key cryptography","role":"Contextual","family":"ECC"},
+  {"name":"Diffie-Hellman","pattern":"(?i)\\b(Diffie[- ]Hellman|DH-?2048)\\b","category":"Public-key cryptography","role":"Key Establishment","family":"DH"},
+  {"name":"RSA","pattern":"(?i)\\bRSA\\b","category":"Public-key cryptography","role":"Contextual","family":"RSA"},
+  {"name":"P-521","pattern":"(?i)\\b(P-?521|SECP521R1)\\b","category":"Public-key cryptography","role":"Contextual","parameter":"P-521","family":"ECC"},
+  {"name":"P-384","pattern":"(?i)\\b(P-?384|SECP384R1)\\b","category":"Public-key cryptography","role":"Contextual","parameter":"P-384","family":"ECC"},
+  {"name":"P-256","pattern":"(?i)\\b(P-?256|SECP256R1)\\b","category":"Public-key cryptography","role":"Contextual","parameter":"P-256","family":"ECC"},
+  {"name":"AES-256-GCM","pattern":"(?i)AES[_ -]?256[_ -]?GCM","category":"Symmetric cryptography","role":"Authenticated Encryption","parameter":"256 bits","family":"AES-256-GCM"},
+  {"name":"AES-256","pattern":"(?i)AES[_ -]?256","category":"Symmetric cryptography","role":"Encryption","parameter":"256 bits","family":"AES-256"},
+  {"name":"AES-128","pattern":"(?i)AES[_ -]?128","category":"Symmetric cryptography","role":"Encryption","parameter":"128 bits","family":"AES-128"},
+  {"name":"SHA-512","pattern":"(?i)SHA[_ -]?512","category":"Hashing","role":"Hashing","parameter":"512 bits","family":"SHA-512"},
+  {"name":"SHA-384","pattern":"(?i)SHA[_ -]?384","category":"Hashing","role":"Hashing","parameter":"384 bits","family":"SHA-384"},
+  {"name":"SHA-256","pattern":"(?i)SHA[_ -]?256","category":"Hashing","role":"Hashing","parameter":"256 bits","family":"SHA-256"}
+]

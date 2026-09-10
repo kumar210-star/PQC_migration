@@ -1,0 +1,11 @@
+service: Citizen Secure Records
+data_classification: synthetic-demo-only
+record_encryption: AES-256-GCM
+record_integrity: SHA-256
+fields:
+  - Citizen ID
+  - Name
+  - Date of Birth
+  - Address
+  - Government Service
+
